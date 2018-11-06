@@ -1,0 +1,42 @@
+
+
+@objects
+    header      #header
+    meni        #meni
+    naslov      #header h1
+    logo        #header img
+    footer      #footer
+    container   css .container
+    table       #commiti
+    paragraf    css p
+    link        #commiti tr th
+    okvriLinka  #commiti tr
+
+= Header =
+    naslov:
+        inside header 20 to 25px top right
+    logo:
+        inside header 20px left
+    naslov:
+        text is "Pregled commita"
+    logo:
+        width 100px
+        height 100px
+    
+= Footer =
+    footer:
+        below container
+        below header
+
+= GlavniSadrzaj =
+    container:
+        below header
+        width ~100% of screen/width
+
+
+    table:
+        below paragraf
+        width ~68% of screen/width
+        
+
+            

@@ -1,0 +1,98 @@
+{
+  "testId" : "1-login.gspec",
+  "name" : "login.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  login.gspec --url file:///var/www/html/login.html --size 1024x768 --htmlreport izvjestaji",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: login.gspec included tags: ",
+          "status" : "info",
+          "time" : 1541542710903,
+          "sections" : [ {
+            "name" : "Login",
+            "place" : {
+              "filePath" : "login.gspec",
+              "lineNumber" : 7
+            },
+            "objects" : [ {
+              "name" : "login",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "login.gspec",
+                  "lineNumber" : 9
+                },
+                "name" : "height 200px",
+                "highlight" : [ "login" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "login.gspec",
+                  "lineNumber" : 10
+                },
+                "name" : "width 400px",
+                "highlight" : [ "login" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "login.gspec",
+                  "lineNumber" : 11
+                },
+                "name" : "centered horizontally inside screen",
+                "highlight" : [ "login", "screen" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "login.gspec",
+                  "lineNumber" : 12
+                },
+                "name" : "centered vertically inside screen",
+                "highlight" : [ "login", "screen" ]
+              } ]
+            }, {
+              "name" : "form",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "login.gspec",
+                  "lineNumber" : 14
+                },
+                "name" : "centered horizontally inside screen",
+                "highlight" : [ "form", "screen" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "login.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "centered vertically inside screen",
+                "highlight" : [ "form", "screen" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "form" : {
+              "area" : [ 454, 232, 320, 127 ]
+            },
+            "screen" : {
+              "area" : [ 0, 0, 1229, 592 ]
+            },
+            "login" : {
+              "area" : [ 414, 196, 400, 200 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1541542709671,
+        "type" : "node"
+      } ],
+      "time" : 1541542703771,
+      "type" : "node"
+    } ]
+  }
+}

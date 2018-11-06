@@ -1,0 +1,222 @@
+{
+  "testId" : "1-addvjezba.gspec",
+  "name" : "addVjezba.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  addVjezba.gspec --url file:///var/www/html/addVjezba.html --size 1024x768 --htmlreport izvjestaji5",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: addVjezba.gspec included tags: ",
+          "status" : "info",
+          "time" : 1541542603218,
+          "sections" : [ {
+            "name" : "Header",
+            "place" : {
+              "filePath" : "addVjezba.gspec",
+              "lineNumber" : 15
+            },
+            "objects" : [ {
+              "name" : "naslov",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 17
+                },
+                "name" : "inside header 20 to 25px top right",
+                "highlight" : [ "naslov", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 21
+                },
+                "name" : "text is \"Dodavanje vježbe/spirale\"",
+                "highlight" : [ "naslov" ]
+              } ]
+            }, {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 19
+                },
+                "name" : "inside header 20px left",
+                "highlight" : [ "logo", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 23
+                },
+                "name" : "width 100px",
+                "highlight" : [ "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 24
+                },
+                "name" : "height 100px",
+                "highlight" : [ "logo" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Footer",
+            "place" : {
+              "filePath" : "addVjezba.gspec",
+              "lineNumber" : 26
+            },
+            "objects" : [ {
+              "name" : "footer",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "below container",
+                "highlight" : [ "footer", "container" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "below glavniSadrzaj",
+                "highlight" : [ "footer", "glavniSadrzaj" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "below header",
+                "highlight" : [ "footer", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 31
+                },
+                "name" : "below formaDruga",
+                "highlight" : [ "footer", "formaDruga" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 32
+                },
+                "name" : "below formaPrva",
+                "highlight" : [ "footer", "formaPrva" ]
+              } ]
+            } ]
+          }, {
+            "name" : "GlavniSadrzaj",
+            "place" : {
+              "filePath" : "addVjezba.gspec",
+              "lineNumber" : 34
+            },
+            "objects" : [ {
+              "name" : "container",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "width ~100% of screen/width",
+                "highlight" : [ "container" ]
+              } ]
+            }, {
+              "name" : "glavniSadrzaj",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 38
+                },
+                "name" : "width ~85% of screen/width",
+                "highlight" : [ "glavniSadrzaj" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 39
+                },
+                "name" : "centered horizontally inside container",
+                "highlight" : [ "glavniSadrzaj", "container" ]
+              } ]
+            }, {
+              "name" : "formaPrva",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 41
+                },
+                "name" : "centered horizontally inside glavniSadrzaj",
+                "highlight" : [ "formaPrva", "glavniSadrzaj" ]
+              } ]
+            }, {
+              "name" : "formaDruga",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 43
+                },
+                "name" : "centered horizontally inside glavniSadrzaj",
+                "highlight" : [ "formaDruga", "glavniSadrzaj" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addVjezba.gspec",
+                  "lineNumber" : 44
+                },
+                "name" : "below formaPrva",
+                "highlight" : [ "formaDruga", "formaPrva" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "container" : {
+              "area" : [ 0, 145, 1012, 885 ]
+            },
+            "formaPrva" : {
+              "area" : [ 290, 165, 430, 351 ]
+            },
+            "naslov" : {
+              "area" : [ 598, 20, 393, 40 ]
+            },
+            "glavniSadrzaj" : {
+              "area" : [ 75, 145, 860, 885 ]
+            },
+            "formaDruga" : {
+              "area" : [ 290, 536, 430, 473 ]
+            },
+            "footer" : {
+              "area" : [ 0, 1030, 1012, 20 ]
+            },
+            "header" : {
+              "area" : [ 0, 0, 1012, 145 ]
+            },
+            "logo" : {
+              "area" : [ 20, 0, 100, 100 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1541542600496,
+        "type" : "node"
+      } ],
+      "time" : 1541542593335,
+      "type" : "node"
+    } ]
+  }
+}

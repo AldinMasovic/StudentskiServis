@@ -1,0 +1,39 @@
+
+
+@objects
+    header      #header
+    meni        #meni
+    naslov      #header h1
+    logo        #header img
+    footer      #footer
+    glavniSadrzaj   #glavniSadrzaj
+    side        #side
+
+= Header =
+
+    naslov:
+        inside header 20 to 25px top right
+    logo:
+        inside header 20px left
+    naslov:
+        text is "Dodavanje godine"
+    logo:
+        width 100px
+        height 100px
+
+    
+= Footer =
+    footer:
+        below glavniSadrzaj
+        below side
+        below header
+
+= GlavniSadrzaj =
+    glavniSadrzaj:
+        right-of side
+        width 64 to 66% of screen/width
+    side:
+        left-of glavniSadrzaj
+        width 34 to 36% of screen/width
+
+            

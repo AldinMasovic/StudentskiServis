@@ -1,0 +1,17 @@
+
+
+@objects
+    login      #login
+    form        #login form
+
+= Login =
+    login:
+        height 200px
+        width 400px
+        centered horizontally inside screen
+        centered vertically inside screen
+    form:
+        centered horizontally inside screen
+        centered vertically inside screen
+        
+    

@@ -1,0 +1,178 @@
+{
+  "testId" : "1-addgodina.gspec",
+  "name" : "addGodina.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  addGodina.gspec --url file:///var/www/html/addGodina.html --size 1024x768 --htmlreport izvjestaji7",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: addGodina.gspec included tags: ",
+          "status" : "info",
+          "time" : 1541542542846,
+          "sections" : [ {
+            "name" : "Header",
+            "place" : {
+              "filePath" : "addGodina.gspec",
+              "lineNumber" : 12
+            },
+            "objects" : [ {
+              "name" : "naslov",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addGodina.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "inside header 20 to 25px top right",
+                "highlight" : [ "naslov", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addGodina.gspec",
+                  "lineNumber" : 19
+                },
+                "name" : "text is \"Dodavanje godine\"",
+                "highlight" : [ "naslov" ]
+              } ]
+            }, {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addGodina.gspec",
+                  "lineNumber" : 17
+                },
+                "name" : "inside header 20px left",
+                "highlight" : [ "logo", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addGodina.gspec",
+                  "lineNumber" : 21
+                },
+                "name" : "width 100px",
+                "highlight" : [ "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addGodina.gspec",
+                  "lineNumber" : 22
+                },
+                "name" : "height 100px",
+                "highlight" : [ "logo" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Footer",
+            "place" : {
+              "filePath" : "addGodina.gspec",
+              "lineNumber" : 25
+            },
+            "objects" : [ {
+              "name" : "footer",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addGodina.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "below glavniSadrzaj",
+                "highlight" : [ "footer", "glavniSadrzaj" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addGodina.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "below side",
+                "highlight" : [ "footer", "side" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addGodina.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "below header",
+                "highlight" : [ "footer", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "GlavniSadrzaj",
+            "place" : {
+              "filePath" : "addGodina.gspec",
+              "lineNumber" : 31
+            },
+            "objects" : [ {
+              "name" : "glavniSadrzaj",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addGodina.gspec",
+                  "lineNumber" : 33
+                },
+                "name" : "right-of side",
+                "highlight" : [ "glavniSadrzaj", "side" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addGodina.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "width 64 to 66% of screen/width",
+                "highlight" : [ "glavniSadrzaj" ]
+              } ]
+            }, {
+              "name" : "side",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addGodina.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "left-of glavniSadrzaj",
+                "highlight" : [ "side", "glavniSadrzaj" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "addGodina.gspec",
+                  "lineNumber" : 37
+                },
+                "name" : "width 34 to 36% of screen/width",
+                "highlight" : [ "side" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "naslov" : {
+              "area" : [ 924, 20, 284, 40 ]
+            },
+            "glavniSadrzaj" : {
+              "area" : [ 430, 145, 798, 342 ]
+            },
+            "side" : {
+              "area" : [ 0, 145, 430, 342 ]
+            },
+            "footer" : {
+              "area" : [ 0, 487, 1229, 20 ]
+            },
+            "header" : {
+              "area" : [ 0, 0, 1229, 145 ]
+            },
+            "logo" : {
+              "area" : [ 20, 0, 100, 100 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1541542539278,
+        "type" : "node"
+      } ],
+      "time" : 1541542517847,
+      "type" : "node"
+    } ]
+  }
+}

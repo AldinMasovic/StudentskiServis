@@ -1,0 +1,41 @@
+
+
+@objects
+    header      #header
+    meni        #meni
+    naslov      #header h1
+    logo        #header img
+    footer      #footer
+    polovina    css .polovina
+    cetvrtina   css .cetvrtina
+    folder      css .folder
+    item        css .item
+
+= Header =
+    naslov:
+        inside header 20 to 25px top right
+    logo:
+        inside header 20px left
+    naslov:
+        text is "Odabir vjezbe"
+    logo:
+        width 100px
+        height 100px
+    
+= Footer =
+    footer:
+        below cetvrtina
+        below polovina
+        below header
+
+= GlavniSadrzaj =
+    polovina:
+        right-of cetvrtina
+        width ~50% of screen/width
+    cetvrtina:
+        left-of polovina
+        width ~25% of screen/width
+    item:
+        inside folder
+
+            

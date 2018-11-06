@@ -1,0 +1,173 @@
+{
+  "testId" : "1-commiti.gspec",
+  "name" : "commiti.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  commiti.gspec --url file:///var/www/html/commiti.html --size 1024x768 --htmlreport izvjestaji3",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: commiti.gspec included tags: ",
+          "status" : "info",
+          "time" : 1541542642324,
+          "sections" : [ {
+            "name" : "Header",
+            "place" : {
+              "filePath" : "commiti.gspec",
+              "lineNumber" : 15
+            },
+            "objects" : [ {
+              "name" : "naslov",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 17
+                },
+                "name" : "inside header 20 to 25px top right",
+                "highlight" : [ "naslov", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 21
+                },
+                "name" : "text is \"Pregled commita\"",
+                "highlight" : [ "naslov" ]
+              } ]
+            }, {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 19
+                },
+                "name" : "inside header 20px left",
+                "highlight" : [ "logo", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 23
+                },
+                "name" : "width 100px",
+                "highlight" : [ "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 24
+                },
+                "name" : "height 100px",
+                "highlight" : [ "logo" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Footer",
+            "place" : {
+              "filePath" : "commiti.gspec",
+              "lineNumber" : 26
+            },
+            "objects" : [ {
+              "name" : "footer",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "below container",
+                "highlight" : [ "footer", "container" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "below header",
+                "highlight" : [ "footer", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "GlavniSadrzaj",
+            "place" : {
+              "filePath" : "commiti.gspec",
+              "lineNumber" : 31
+            },
+            "objects" : [ {
+              "name" : "container",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 33
+                },
+                "name" : "below header",
+                "highlight" : [ "container", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "width ~100% of screen/width",
+                "highlight" : [ "container" ]
+              } ]
+            }, {
+              "name" : "table",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 38
+                },
+                "name" : "below paragraf",
+                "highlight" : [ "table", "paragraf" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "commiti.gspec",
+                  "lineNumber" : 39
+                },
+                "name" : "width ~68% of screen/width",
+                "highlight" : [ "table" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "container" : {
+              "area" : [ 0, 145, 1217, 509 ]
+            },
+            "naslov" : {
+              "area" : [ 932, 20, 264, 40 ]
+            },
+            "footer" : {
+              "area" : [ 0, 654, 1217, 20 ]
+            },
+            "header" : {
+              "area" : [ 0, 0, 1217, 145 ]
+            },
+            "logo" : {
+              "area" : [ 20, 0, 100, 100 ]
+            },
+            "table" : {
+              "area" : [ 30, 295, 823, 329 ]
+            },
+            "paragraf" : {
+              "area" : [ 30, 175, 1157, 20 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1541542640288,
+        "type" : "node"
+      } ],
+      "time" : 1541542633169,
+      "type" : "node"
+    } ]
+  }
+}

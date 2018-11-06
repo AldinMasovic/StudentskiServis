@@ -1,0 +1,195 @@
+{
+  "testId" : "1-zadaci.gspec",
+  "name" : "zadaci.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  zadaci.gspec --url file:///var/www/html/zadaci.html --size 1024x768 --htmlreport izvjestaji2",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: zadaci.gspec included tags: ",
+          "status" : "info",
+          "time" : 1541542668742,
+          "sections" : [ {
+            "name" : "Header",
+            "place" : {
+              "filePath" : "zadaci.gspec",
+              "lineNumber" : 14
+            },
+            "objects" : [ {
+              "name" : "naslov",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 16
+                },
+                "name" : "inside header 20 to 25px top right",
+                "highlight" : [ "naslov", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "text is \"Odabir vjezbe\"",
+                "highlight" : [ "naslov" ]
+              } ]
+            }, {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 18
+                },
+                "name" : "inside header 20px left",
+                "highlight" : [ "logo", "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 22
+                },
+                "name" : "width 100px",
+                "highlight" : [ "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 23
+                },
+                "name" : "height 100px",
+                "highlight" : [ "logo" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Footer",
+            "place" : {
+              "filePath" : "zadaci.gspec",
+              "lineNumber" : 25
+            },
+            "objects" : [ {
+              "name" : "footer",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "below cetvrtina",
+                "highlight" : [ "footer", "cetvrtina" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "below polovina",
+                "highlight" : [ "footer", "polovina" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "below header",
+                "highlight" : [ "footer", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "GlavniSadrzaj",
+            "place" : {
+              "filePath" : "zadaci.gspec",
+              "lineNumber" : 31
+            },
+            "objects" : [ {
+              "name" : "polovina",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 33
+                },
+                "name" : "right-of cetvrtina",
+                "highlight" : [ "polovina", "cetvrtina" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "width ~50% of screen/width",
+                "highlight" : [ "polovina" ]
+              } ]
+            }, {
+              "name" : "cetvrtina",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "left-of polovina",
+                "highlight" : [ "cetvrtina", "polovina" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 37
+                },
+                "name" : "width ~25% of screen/width",
+                "highlight" : [ "cetvrtina" ]
+              } ]
+            }, {
+              "name" : "item",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "zadaci.gspec",
+                  "lineNumber" : 39
+                },
+                "name" : "inside folder",
+                "highlight" : [ "item", "folder" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "naslov" : {
+              "area" : [ 978, 20, 218, 40 ]
+            },
+            "item" : {
+              "area" : [ 635, 202, 100, 100 ]
+            },
+            "folder" : {
+              "area" : [ 629, 166, 566, 252 ]
+            },
+            "footer" : {
+              "area" : [ 0, 601, 1217, 20 ]
+            },
+            "header" : {
+              "area" : [ 0, 0, 1217, 145 ]
+            },
+            "logo" : {
+              "area" : [ 20, 0, 100, 100 ]
+            },
+            "polovina" : {
+              "area" : [ 608, 145, 608, 456 ]
+            },
+            "cetvrtina" : {
+              "area" : [ 0, 145, 304, 456 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1541542666384,
+        "type" : "node"
+      } ],
+      "time" : 1541542659760,
+      "type" : "node"
+    } ]
+  }
+}

@@ -1,0 +1,41 @@
+
+
+@objects
+    header      #header
+    meni        #meni
+    naslov      #header h1
+    logo        #header img
+    footer      #footer
+    container   css .container
+    glavniSadrzaj   #glavniSadrzaj
+    forma       #noviZadatak
+    
+
+= Header =
+    naslov:
+        inside header 20 to 25px top right
+    logo:
+        inside header 20px left
+    naslov:
+        text is "Dodavanje zadatka"
+    logo:
+        width 100px
+        height 100px
+    
+= Footer =
+    footer:
+        below container
+        below glavniSadrzaj
+        below forma
+        below header
+
+= GlavniSadrzaj =
+    container:
+        width ~100% of screen/width
+    glavniSadrzaj:
+        width ~85% of screen/width
+        centered horizontally inside container
+    forma:
+        centered horizontally inside glavniSadrzaj
+
+            
