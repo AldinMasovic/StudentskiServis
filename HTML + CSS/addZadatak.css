@@ -1,0 +1,85 @@
+*{
+	margin: 0px;
+	padding: 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+}
+#header{
+	display: inline;
+	background: #fdc00f;
+}
+
+img{
+	position: absolute;
+	left: 20px;
+	top: 0px;
+}
+h1{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	background: #fdc00f;
+}
+#meni{
+	background: #fdc00f;
+	padding-bottom: 5px;
+	padding-top: 100px;
+}
+#meni ul li{
+	display: inline-block;
+}
+#meni ul li a{
+	padding: 10px 20px;
+	text-decoration: none;
+	color: blue;
+}
+#meni ul li a:hover{
+	color:darkblue;
+}
+.container{
+	width: 100%;
+	background: #bbbbbb;
+}
+#glavniSadrzaj{
+	width: 85%;
+	margin: 0 auto;
+	background: #d9cfb1;
+	text-align: center;
+}
+form{
+	box-shadow: 2px 5px #888888;
+	display: inline-block;
+	padding: 4%;
+	background: #c8bf9b;
+	margin: 20px;
+	text-align:left;
+
+}
+form *{
+	margin: 10px 0px 0px 10px;
+}
+select{
+	width: 50%;
+}
+input[name="dodaj"]{
+	padding: 3px 5px 3px 5px;
+	float: right;
+}
+#footer {
+	clear: both;
+	width: 100%;
+	background: #fdc00f;
+	text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    #glavniSadrzaj{
+		width: 100%;
+	}
+	h1{
+		position: initial;
+		width: 100%;
+		margin-left: 10px;
+	}
+}

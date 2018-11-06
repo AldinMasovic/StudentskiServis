@@ -1,0 +1,40 @@
+body {
+	background: grey;
+	
+}
+#login{
+	text-align: center;
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	
+	background: #87a8ee;
+	border-radius: 5px;
+	
+}
+
+form *{
+	margin: 10px;
+}
+form {
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+form input[type=button]{
+	margin-left: 100px;
+	padding-left: 20px;
+	padding-right: 20px;
+	
+}
+form input[type=button]:hover{
+	background: #aeaeae;
+}
+form input{
+	border-radius: 5px;
+}

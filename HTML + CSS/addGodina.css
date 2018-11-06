@@ -1,0 +1,123 @@
+*{
+	margin: 0px;
+	padding: 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+}
+#header{
+	display: inline;
+	background: #fdc00f;
+}
+
+img{
+	position: absolute;
+	left: 20px;
+	top: 0px;
+}
+h1{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	background: #fdc00f;
+}
+#meni{
+	background: #fdc00f;
+	padding-bottom: 5px;
+	padding-top: 100px;
+}
+#meni ul li{
+	display: inline-block;
+}
+#meni ul li a{
+	padding: 10px 20px;
+	text-decoration: none;
+	color: blue;
+}
+#meni ul li a:hover{
+	color:darkblue;
+}
+#container{
+	display: table;
+	width: 100%;
+}
+#glavniSadrzaj , #side{
+	display: table-cell;
+}
+#glavniSadrzaj{
+	width: 65%;
+	margin:0 auto;
+	background: #bbbbbb;
+}
+#side{
+	width: 35%;
+	margin:0 auto;
+	text-align: left;
+	background: #d9cfb1;
+}
+form{
+	display: inline-block;
+	padding: 4%;
+	margin: 20px;
+}
+#unosGodine{
+	text-align: center;
+	margin-bottom: 10px;
+	/*margin-left: 20%;*/
+}
+#side input{
+	margin-left: 10%;
+	margin-bottom: 10px;
+}
+#side form p {
+	margin-left: 10%;
+	display: inline-block;
+}
+input[name=poništi]{
+	float: left;
+	padding: 3px 5px 3px 5px;
+}
+input[name=unesi]{
+	float: right;
+	margin-right: 10%;
+	padding: 3px 5px 3px 5px;
+}
+input[type=text]{
+	width: 80%;
+}
+.godina{
+	width: 150px;
+	height: 150px;
+	box-shadow: 2px 5px #888888;
+	margin: 10px;
+	display: inline-grid;
+	background: #c8bf9b;
+}
+.godina *{
+	display: inline-block;
+}
+
+#footer {
+	clear: both;
+	width: 100%;
+	background: #fdc00f;
+	text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    #glavni{
+    	display: block;
+    }
+    #side , #glavniSadrzaj{
+		display: block;
+		width: 100%;
+	}
+	#side{
+		padding-bottom: 10px;
+	}
+	h1{
+		position: initial;
+		width: 100%;
+		margin-left: 10px;
+	}
+}

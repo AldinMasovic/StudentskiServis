@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dodaj studenta</title>
+	<link rel="stylesheet" type="text/css" href="addStudent.css">
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+<body>
+	<div id="header">
+		<div id="meni">
+			<ul>
+				<li> <a href="studenti.html" >Pregled studenata</a></li>
+				<li> <a href="zadaci.html" >Odabir vjezbe</a></li>
+				<li> <a href="commiti.html" >Pregled commita</a></li>
+				<li> <a href="addZadatak.html" >Dodavanje zadatka</a></li>
+				<li> <a href="addVjezba.html" >Dodavanje vježbe/spirale</a></li>
+				<li> <a href="addStudent.html" >Dodavanje studenata</a></li>
+				<li> <a href="addGodina.html" >Dodavanje godine</a></li>
+			</ul>
+			<h1>Dodavanje studenta</h1>
+		</div>
+		<img src="logo.jpg" alt="Logo">
+	</div>
+	<div class="container">
+		<div id="glavniSadrzaj">
+			<form name="fPojedinacni">
+				<p class="naslov">Pojedinačni unos</p>
+				<p>Godina</p>
+				<select name="godina">
+				  <option value="vjezba1">2018/19</option>
+				  <option value="vjezba2">2017/18</option>
+				</select>
+				<br/>
+				<p>Ime i prezime</p>
+				<input type="text" name="ime" required>
+				<br/>
+				<p>Index</p>
+				<input type="number" name="index" required>
+				<br/>
+				<p>Email</p>
+				<input type="email" name="email" required>
+				<br/>
+				<input type="submit" name="submit" value="Unesi">
+			</form>
+
+			<form name="fMasovni">
+				<p class="naslov">Masovni unos</p>
+				<p>Godina</p>
+				<select name="godina">
+				  <option value="vjezba1">2018/19</option>
+				  <option value="vjezba2">2017/18</option>
+				</select>
+				<br/>
+				<p>CSV fajl</p>				
+				<input type="file" name="csv lista">
+				<input type="submit" name="submit" value="Unesi">
+			</form>
+		</div>
+	</div>
+	<div id="footer">
+			<p>Web tehnologije 2018/19</p>
+	</div>
+
+</body>
+</html>
