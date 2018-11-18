@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Commiti</title>
+	<link rel="stylesheet" type="text/css" href="commiti.css">
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+</head>
+<body>
+	<script src="committabela.js"></script>
+	<div id="header">
+		<div id="meni">
+			<ul>
+				<li> <a href="studenti.html" >Pregled studenata</a></li>
+				<li> <a href="zadaci.html" >Odabir vjezbe</a></li>
+				<li> <a href="commiti.html" >Pregled commita</a></li>
+				<li> <a href="addZadatak.html" >Dodavanje zadatka</a></li>
+				<li> <a href="addVjezba.html" >Dodavanje vježbe/spirale</a></li>
+				<li> <a href="addStudent.html" >Dodavanje studenata</a></li>
+				<li> <a href="addGodina.html" >Dodavanje godine</a></li>
+
+			</ul>
+			<h1>Pregled commita</h1>
+		</div>
+		<img src="logo.jpg" alt="Logo">
+	</div>
+
+	<div id="container">
+		<form id="kreiraj">
+			<label>Broj redova</label>
+			<input type="number" id="brojredova" name="red" value="0">
+			<input type="button" name="kreiraj" value="Kreiraj" onclick="funkcijaKreiraj('container')" >
+		</form>
+		<form id="doradi">
+			<label>Red</label>
+			<input type="number" id="red1" name="red" value="0">
+			<label>Kolona</label>
+			<input type="number" id="kolona1" name="kolona" value="0">
+			<input type="button" name="dodaj" value="Dodaj" onclick="funkcijaDodaj()">
+			<input type="button" name="obrisi" value="Obrisi" onclick="funkcijaObrisi()">
+			<input type="button" name="edit" value="Edit" onclick="funkcijaEdituj()">
+			<label>URL:</label>
+			<input type="text"   id="url1" name="url">
+			<p id="poruke"></p>
+			<input type="button" name="nesta" value="Validiraj URL" onclick="funkcija()">
+
+		</form>
+	</div>
+
+	<div id="footer">
+			<p>Web tehnologije 2018/19</p>
+		</div>
+		<script src="validacija.js"></script>
+	<script src="commiti.js"></script>
+</body>
+</html>

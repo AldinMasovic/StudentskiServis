@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dodaj godinu</title>
+	<link rel="stylesheet" type="text/css" href="addGodina.css">
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+<body>
+	<div id="header">
+		<div id="meni">
+			<ul>
+				<li> <a href="studenti.html" >Pregled studenata</a></li>
+				<li> <a href="zadaci.html" >Odabir vjezbe</a></li>
+				<li> <a href="commiti.html" >Pregled commita</a></li>
+				<li> <a href="addZadatak.html" >Dodavanje zadatka</a></li>
+				<li> <a href="addVjezba.html" >Dodavanje vježbe/spirale</a></li>
+				<li> <a href="addStudent.html" >Dodavanje studenata</a></li>
+				<li> <a href="addGodina.html" >Dodavanje godine</a></li>
+			</ul>
+			<h1>Dodavanje godine</h1>
+		</div>
+		<img src="logo.jpg" alt="Logo">
+	</div>
+	<div id="container">
+		<div id="side">
+			<p id="unosGodine">Unos godine:</p>
+			<form action="#">
+				<p>Naziv godine</p>
+				<input type="text" name="naziv" required>
+				<br/>
+				<p>Nazivi repozitorija vježbe</p>
+				<input type="text" name="rvjezbe" required>
+				<br/>
+				<p>Nazivi repozitorija spirale</p>
+				<input type="text" name="rspiral" required>
+				<br/><br/>
+				<input type="button" name="poništi" value="Poništi">
+				<input type="submit" name="unesi" value="Unesi" onclick="funkcija()">
+				<p id="poruke"></p>
+			</form>
+		</div>
+
+		<div id="glavniSadrzaj">
+			<div class="godina">
+				<p id="godina">2015/16</p>
+				<p><strong>Broj studenata:</strong>90</p>
+				<p><strong>Broj vježbi:</strong>10</p>
+				<p><strong>Broj spirala:</strong>4</p>
+			</div>
+			<div class="godina">
+				<p>2016/17</p>
+				<p><strong>Broj studenata:</strong>90</p>
+				<p><strong>Broj vježbi:</strong>10</p>
+				<p><strong>Broj spirala:</strong>4</p>
+			</div>
+			<div class="godina">
+				<p>2017/18</p>
+				<p><strong>Broj studenata:</strong>90</p>
+				<p><strong>Broj vježbi:</strong>10</p>
+				<p><strong>Broj spirala:</strong>4</p>
+			</div>
+			<div class="godina">
+				<p>2018/19</p>
+				<p><strong>Broj studenata:</strong>90</p>
+				<p><strong>Broj vježbi:</strong>10</p>
+				<p><strong>Broj spirala:</strong>4</p>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="footer">
+		<p>Web tehnologije 2018/19</p>
+	</div>
+	<script src="validacija.js" type="text/javascript"></script>
+	<script src="addGodina.js" type="text/javascript"></script>
+</body>
+</html>
