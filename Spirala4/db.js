@@ -1,5 +1,5 @@
 var Sequelize = require('sequelize');
-var sequelize = new Sequelize("wt2018","root","",{
+var sequelize = new Sequelize("wt2018","root","root",{
     host:"127.0.0.1",
     dialect:"mysql",
     logging:false});
