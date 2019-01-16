@@ -10,7 +10,7 @@ var path=__dirname+ '/public';
 var bodyParser = require('body-parser');
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
-const db = require('./db.js')
+const db = require('./db.js');
 db.sequelize.sync().then(function(){	//{force:true}
     /*inicializacija().then(function(){
         console.log("Gotovo kreiranje tabela i ubacivanje pocetnih podataka!");
@@ -76,8 +76,6 @@ app.post('/addZadatak',upload.any(), function(req, res) {
 				console.log("Uspjesno dodan zadatak u bazu");
 				res.redirect('/addZadatak.html');
 			})
-		    //res.send(`Your files's name is ${file.originalname}. Its size is ${file.size} and its mime type is ${file.mimetype}`);
-		    //res.end();
 		    
 	  	});	
 	  }
@@ -86,32 +84,6 @@ app.post('/addZadatak',upload.any(), function(req, res) {
 	catch(err){
 		console.log("Zadatak 2 error cathc");
 	}
- /* console.log("Zadatak 2  REQ FILES - \n " + req.files);
-  if(req.body.naziv==null){
-  	console.log("POSTOJI FAJL ZADAATAK DVA RETUN");
-  	return res.redirect(path+"/greska.html");
-  }
-  const file = req.files[0];
-  if(file.mimetype!="application/pdf"){
-  	return res.redirect(path+'/greska.html');
-  }
-  else{
-  	fs.readFile(file.path, function(err, data) {
-	    if (err){
-	    	console.log("Saljem na greska html");
-	      return res.redirect('/greska'+'.html');
-	  }
-	  	var jsObj="{'naziv':"+req.body.naziv + ", 'postavka': http://localhost:8080/zadatak?naziv="+req.body.naziv+"}";
-	  	var ubacitiJS=JSON.stringify(jsObj);
-	  	var stream = fs.createWriteStream(__dirname+"/pdf/"+ req.body.naziv + "Zad.json");
-		stream.once('open', function(fd) {
-			stream.write(ubacitiJS);
-		  	stream.end();
-		});
-	    //res.send(`Your files's name is ${file.originalname}. Its size is ${file.size} and its mime type is ${file.mimetype}`);
-	    res.end();
-  	});	
-  }*/
 });
 
 
@@ -296,47 +268,158 @@ zahtjev iz forme fPostojeca sa podacima sGodine i sVjezbe na url http://localhos
 kreira se veza između godine sa id-em sGodine i vježbom sa id-em sVjezbe. Nakon dodavanja
 vratite na stranicu addVjezba.html*/
 app.post('/addVjezba', function(req, res) {
-	  var nameGod="";
-	  console.log("Naziv godine " + req.body.sGodine);
-	  console.log("Naiziv godine "+ req.body.sVjezbe);
-	  ///TODO: naziv: req.body.sGodine  	naziv: req.body.sVjezbe
-	  db.vjezba.findOne({where: {naziv: "Vjezba1"}}).then(function(podatakVjezbe){
-	  		db.godina.findOne({where: {naziv: "Godina1"}}).then(function(podatakGodina){
-	  			console.log(podatakVjezbe.id);
-	  			console.log(podatakGodina.id);
-	  			podatakVjezbe.setGodine([podatakGodina]);
-	  			podatakGodina.setVjezbe([podatakVjezbe]);
-	  			console.log("Uspjesno je valjda");
+	if(req.body.naziv==null){
+		db.vjezba.findOne({where: {id: req.body.sVjezbe}}).then(function(podatakVjezbe){
+	  		db.godina.findOne({where: {id: req.body.sGodine}}).then(function(podatakGodina){
+	  			podatakVjezbe.addGodine([podatakGodina]);
+	  			podatakGodina.addVjezbe([podatakVjezbe]);
 	  			res.redirect('/addVjezba.html');
 	  	});
+	  });	
+	}
+	else{
+	  var spiralaTrue=0;
+	  if(req.body.spirala=="on"){
+	  	spiralaTrue=1;
+	  }
+	  db.vjezba.create({
+				naziv: req.body.naziv,
+				spirala: spiralaTrue
+			}).then(function(podatakVjezbe){
+					db.godina.findOne({where: {id: req.body.sGodine}}).then(function(podatakGodina){
+		  			podatakVjezbe.addGodine([podatakGodina]);		
+		  			podatakGodina.addVjezbe([podatakVjezbe]);
+		  			res.redirect('/addVjezba.html');
+		  		});
+		});
+	}
+	  
+});
+/*Zadatak 2.b [0.5b] Implementirajte funkcionalnost dodavanja nove vježbe/spirale. Ako se pošalje
+POST zahtjev iz forme fNova sa podacima sGodine, naziv i spirala kreira se nova vježba sa
+podacima naziv i postavlja joj se polje spirala na true ili false u zavisnosti od vrijednosti spirala iz
+forme. Nakon kreiranja nove vježbe ona se povezuje sa godinom sa id-em sGodine. (Dodavanje
+zadataka na vježbu ne radite u ovom zadatku) Nakon dodavanja vratite na stranicu addVjezba.html*/
 
-	  	console.log("Podatak " + podatakVjezbe);
-	  	console.log("Naziv - " + podatakVjezbe.naziv);
-	  	console.log("Postavka - " + podatakVjezbe.postavka);
 
-	  });
-	  /*db.godina.findOne({ where: {naziv: nameGod} }).then(function(licniPodatak) {
-	  	console.log("Licni podatak - " + licniPodatak);
-	  	res.redirect('/addVjezba.html');
-	  	/*baza.korisnik.create({
-                korisnickoIme: stopAttacks(obj.korisnickoIme),
-                sifra: stopAttacks(obj.sifra),
-                rola: obj.rola
-            }).then(function(user){
-                baza.licniPodaci.create({
-                    id: user.id,
-                    imePrezime: stopAttacks(obj.imePrezime),
-                    bitbucketUrl: stopAttacks(obj.bitbucketUrl),
-                    bitbucketSsh: stopAttacks(obj.bitbucketSsh),
-                    nazivRepozitorija: stopAttacks(obj.nazivRepozitorija)
-                }).then(function() {
-                    console.log('ok');
-                    res.status(200).send({
-                        message: 'Registracija uspješna'
-                    });
-                });
-            });*/
 
+/*Zadatak 2.c [1b] Dio iz forme fNova koji se odnosi na dodavanja zadataka na vježbu izdvojite u
+novu formu (na istoj stranici). U novoj formi fPoveziZadatak treba da se nalazi
+● select - name: sVjezbe
+● select - name: sZadatak
+● input submit - name: dZadatak
+Kada se klikne na dugme dZadatak zadatak se dodaje na vježbu. Šalje se POST zahtjev na url
+http://localhost:8080/vjezba/:idVjezbe/zadatak. U select tagu sZadatak prikažite sve zadatke koji već
+nisu dodjeljeni odabranoj vježbi iz sVjezbe. Ne treba biti moguće u formi odabrati zadatak koji je već
+dodan vježbi. Nakon dodavanja zadatka vratite na stranicu addVjezba.html*/
+app.post('/vjezba/:idVjezbe/zadatak', function(req, res) {
+	  if(req.body.sZadatak==null || req.body.sVjezbe==null){
+	  	res.redirect('/greska.html');
+	  }
+	  db.vjezba.findOne({where: {id: req.params.idVjezbe}}).then(function(podatakVjezba){
+	  		db.zadatak.findOne({where:{id: req.body.sZadatak}}).then(function(podatakZdatak){
+		  			podatakVjezba.addZadaci([podatakZdatak]);	
+		  			podatakZdatak.addVjezbe([podatakVjezba]);
+		  			res.redirect('/addVjezba.html');
+	  		});
+	  	});
+		  			
+});
+app.get('/dajMiPodatke',function(req,res){
+	    var niz=[];
+		db.vjezba.findAll().then(function(podaci){
+			for(var i=0;i<podaci.length;i++){
+				var objekat={id:podaci[i].id,naziv:podaci[i].naziv,spirala:podaci[i].spirala};
+				niz.push(objekat);
+			}
+			res.writeHead(200,{"Content-Type":"application/json"});
+			res.end(JSON.stringify(niz));
+		});
+});
+app.get('/dajMiGodine',function(req,res){
+	    var niz=[];
+		db.godina.findAll().then(function(podaci){
+			for(var i=0;i<podaci.length;i++){
+				var objekat={id:podaci[i].id,naziv:podaci[i].naziv,nazivRepSpi:podaci[i].nazivRepSpi,nazivRepVje:podaci[i].nazivRepVje};
+				niz.push(objekat);
+			}
+			res.writeHead(200,{"Content-Type":"application/json"});
+			res.end(JSON.stringify(niz));
+		});
+});
+app.get('/dajZadatkeZaVjezbe',function(req,res){
+	    var niz=[];
+	    db.vjezba.findOne({where:{id:req.query.naziv}}).then(function(vjezbaPodatak){
+	    	vjezbaPodatak.getZadaci().then(function(podaciPovezanosti){
+	    		db.zadatak.findAll().then(function(podaci){
+				for(var i=0;i<podaci.length;i++){
+					var upis=true;
+					for(var j=0;j<podaciPovezanosti.length;j++){
+						if(podaciPovezanosti[j].id==podaci[i].id)upis=false;
+					}
+					if(upis){
+						var objekat={id:podaci[i].id,naziv:podaci[i].naziv,spirala:podaci[i].spirala};
+						niz.push(objekat);	
+					}
+					
+				}
+				res.writeHead(200,{"Content-Type":"application/json"});
+				res.end(JSON.stringify(niz));
+				});
+	    	});
+	    });
 });
 
+//Zadatak 3.a [2b] Stranicu addStudent ispravite tako da ima jednu formu sa poljima
+app.post('/student', function(req, res) {
+	var studenti=req.body.studenti;
+	var m=0;
+	var nazivGod="";
+	var n=0;
+	var nizNM=[0,0];
+	//var promisa=new Promise(function(resolve,reject){
+		db.godina.findOne({where:{id:req.body.godina}}).then(function(pod){
+		nazivGod=pod.naziv;
+		var nizPromisa=[];
+		for(var i=0;i<studenti.length;i++){
+			var novi=false;
+			var imeCike=studenti[i].imePrezime;
+			var indexCike=studenti[i].index;
+			nizPromisa.push(new Promise(function(resolve,reject){
+				db.student.findOrCreate({where:{index:indexCike},defaults: {imePrezime: imeCike}}).spread(function(user,created){
+				if(created==true){
+					n++;
+					pod.addStudenti([user]);
+				}
+				var promisa=new Promise(function(resolve1,reject1){
+					pod.getStudenti({where:{index:indexCike}}).then(function(resSet){
+						console.log("res set "+resSet);
+						console.log(resSet);
+						if(resSet==""){
+							m++;
+							pod.addStudenti([user]);
+						}
+						resolve1(m);
+					});
+				});
+				promisa.then(function(resolve1){
+					console.log("resolve1" + m);
+					nizNM[0]=n;
+					nizNM[1]=m;
+					resolve(nizNM);	
+				},function(reject1){});
+				//pod.addStudenti([user]);		
+			});
+			}));	
+		}
+		Promise.all(nizPromisa).then(function(resolve){
+			console.log(""+nizNM[0]);
+			console.log(""+nizNM[1]);
+			res.writeHead(200,{"Content-Type":"application/json"});
+			res.end(JSON.stringify({message:"Dodano je "+nizNM[0]+" novih studenata i upisano "+nizNM[1]+" na godinu "+nazivGod}));	
+		},function (error){
+
+		});
+		});	
+});
 app.listen(8080);

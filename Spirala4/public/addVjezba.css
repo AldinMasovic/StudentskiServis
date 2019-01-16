@@ -79,6 +79,9 @@ form[name=fNova]{
 form[name=fPostojeca] input[name=sVjezbe]{
 	display: block;
 }
+form[name=fPoveziZadatak]{
+	margin-top: 20px;
+}
 form[name=fPostojeca] input[name=submit]{
 	display: block;
 }

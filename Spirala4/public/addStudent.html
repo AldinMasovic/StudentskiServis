@@ -24,38 +24,21 @@
 	</div>
 	<div class="container">
 		<div id="glavniSadrzaj">
-			<form name="fPojedinacni" action="#">
+			<form name="fPojedinacni" action="http://localhost:8080/zadatak" method="POST">
 				<p class="naslov">Pojedinačni unos</p>
 				<p>Godina</p>
-				<select name="godina">
-				  <option value="vjezba1">2018/19</option>
-				  <option value="vjezba2">2017/18</option>
+				<select name="sGodina">
 				</select>
 				<br/>
 				<p>Ime i prezime</p>
-				<input type="text" name="ime" required>
+				<input type="text" name="key" required>
 				<br/>
 				<p>Index</p>
-				<input type="number" name="index" required>
+				<input type="text" name="secret" required>
 				<br/>
-				<p>Email</p>
-				<input type="email" name="email" required>
+				<input type="button" value="Učitaj" name="" onclick="nekaFunkcija()">
 				<br/>
-				<input type="submit" name="submit" value="Unesi" onclick="funkcija()">
-				<p id="poruke"></p>
-			</form>
-
-			<form name="fMasovni" action="#">
-				<p class="naslov">Masovni unos</p>
-				<p>Godina</p>
-				<select name="godina">
-				  <option value="vjezba1">2018/19</option>
-				  <option value="vjezba2">2017/18</option>
-				</select>
-				<br/>
-				<p>CSV fajl</p>				
-				<input type="file" name="csv lista">
-				<input type="submit" name="submit" value="Unesi">
+				<input type="button" id="dodaj" value="Dodaj" disabled name="" onclick="dodajStudente()">
 			</form>
 		</div>
 	</div>
@@ -64,5 +47,7 @@
 	</div>
 	<script src="validacija.js" type="text/javascript"></script>
 	<script src="addStudent.js" type="text/javascript"></script>
+	<script src="zadatak3.js" type="text/javascript"></script>
+	<script src="BitBucket.js" type="text/javascript"></script>
 </body>
 </html>

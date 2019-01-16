@@ -1,6 +1,6 @@
 var Sequelize = require('sequelize');
 var sequelize = new Sequelize("wt2018","root","root",{
-    host:"127.0.0.1",
+    host:"localhost",
     dialect:"mysql",
     logging:false});
     
@@ -14,7 +14,8 @@ db.godina = sequelize.import(__dirname + '/godina.js');
 db.zadatak = sequelize.import(__dirname + '/zadatak.js');
 db.vjezba = sequelize.import(__dirname + '/vjezba.js');
 //Prva
-db.student.hasMany(db.godina,{as:'studenti',foreignKey:'studentGod'});
+//db.student.hasMany(db.godina,{as:'studenti',foreignKey:'studentGod'});
+db.godina.hasMany(db.student,{as:'studenti',foreignKey: 'studentGod'});
 //Druga
 db.godinaVjezba=db.godina.belongsToMany(db.vjezba,{as:'vjezbe',through:'godina_vjezba',foreignKey:'idgodina'});
 db.vjezba.belongsToMany(db.godina,{as:'godine',through:'godina_vjezba',foreignKey:'idvjezba'});
