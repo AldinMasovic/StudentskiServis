@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dodaj studenta</title>
+	<link rel="stylesheet" type="text/css" href="addStudent.css">
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+<body>
+	<div id="header">
+		<div id="meni">
+			<ul>
+				<li> <a href="studenti.html" >Pregled studenata</a></li>
+				<li> <a href="zadaci.html" >Odabir vjezbe</a></li>
+				<li> <a href="commiti.html" >Pregled commita</a></li>
+				<li> <a href="addZadatak.html" >Dodavanje zadatka</a></li>
+				<li> <a href="addVjezba.html" >Dodavanje vježbe/spirale</a></li>
+				<li> <a href="addStudent.html" >Dodavanje studenata</a></li>
+				<li> <a href="addGodina.html" >Dodavanje godine</a></li>
+			</ul>
+			<h1>Dodavanje studenta</h1>
+		</div>
+		<img src="logo.jpg" alt="Logo">
+	</div>
+	<div class="container">
+		<div id="glavniSadrzaj">
+			<form name="fPojedinacni" action="http://localhost:8080/zadatak" method="POST">
+				<p class="naslov">Pojedinačni unos</p>
+				<p>Godina</p>
+				<select name="sGodina">
+				</select>
+				<br/>
+				<p>Ime i prezime</p>
+				<input type="text" name="key" required>
+				<br/>
+				<p>Index</p>
+				<input type="text" name="secret" required>
+				<br/>
+				<input type="button" value="Učitaj" name="" onclick="nekaFunkcija()">
+				<br/>
+				<input type="button" id="dodaj" value="Dodaj" disabled name="" onclick="dodajStudente()">
+			</form>
+		</div>
+	</div>
+	<div id="footer">
+			<p>Web tehnologije 2018/19</p>
+	</div>
+	<script src="validacija.js" type="text/javascript"></script>
+	<script src="addStudent.js" type="text/javascript"></script>
+	<script src="zadatak3.js" type="text/javascript"></script>
+	<script src="BitBucket.js" type="text/javascript"></script>
+</body>
+</html>

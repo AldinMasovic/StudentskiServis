@@ -1,0 +1,139 @@
+*{
+	margin: 0px;
+	padding: 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+}
+#header{
+	display: inline;
+	background: #fdc00f;
+}
+
+img{
+	position: absolute;
+	left: 20px;
+	top: 0px;
+}
+h1{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	background: #fdc00f;
+}
+#meni{
+	background: #fdc00f;
+	padding-bottom: 5px;
+	padding-top: 100px;
+}
+#meni ul li{
+	display: inline-block;
+}
+#meni ul li a{
+	padding: 10px 20px;
+	text-decoration: none;
+	color: blue;
+}
+#meni ul li a:hover{
+	color:darkblue;
+}
+.container{
+	width: 100%;
+	background: #bbbbbb;
+	flex-grow: 1;
+}
+#glavniSadrzaj{
+	width: 85%;
+	margin: 0 auto;
+	text-align: center;
+	background: #d9cfb1;
+	/*padding-top: 20px;
+	padding-bottom: 20px;
+	height: 100%;*/
+}
+form{
+	box-shadow: 2px 5px #888888;
+	display: inline-block;
+	width: 50%;
+	padding: 4%;
+	background: #c8bf9b;
+	margin: 0 auto;
+	text-align:left
+}
+form *{
+	margin-left: 10%;
+	margin-top: 10px;
+}
+form[name=fPostojeca]{
+	margin-top: 20px;
+}
+select{
+	width: 50%;
+	padding: 3px 5px 3px 5px;
+}
+form[name=fNova]{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+form[name=fPostojeca] input[name=sVjezbe]{
+	display: block;
+}
+form[name=fPoveziZadatak]{
+	margin-top: 20px;
+}
+form[name=fPostojeca] input[name=submit]{
+	display: block;
+}
+form ul{
+	border-style: solid;
+	border-width: 1px;
+	background: white;
+	width: 50%;
+	text-align: left;
+	list-style-type: none;
+}
+form ul li{
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+input[name=submit],input[name=dZadatak]{
+	float: right;
+	padding: 3px 5px 3px 5px;
+}
+input[name=dZadatak]{
+	width: 30%;
+}
+
+#footer {
+	clear: both;
+	width: 100%;
+	background: #fdc00f;
+	text-align: center;
+}
+.top{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+@media only screen and (max-width: 600px) {
+    #glavniSadrzaj{
+		width: 100%;
+	}
+	h1{
+		position: initial;
+		width: 100%;
+		margin-left: 10px;
+	}
+}
+
+input.valid{
+    border-color: #36cc36;
+}
+input.invalid{
+    border-color: orangered;
+}
+#poruke{
+	display: none;
+}
