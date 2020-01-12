@@ -1,29 +1,22 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Preview:
 
-### What is this repository for? ###
+https://youtu.be/r6qPmzw1amU
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
-### How do I get set up? ###
+How to run:
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+Open the folder Spirala4
 
-### Contribution guidelines ###
+In terminal type:
 
-* Writing tests
-* Code review
-* Other guidelines
+# npm install
 
-### Who do I talk to? ###
+Then
 
-* Repo owner or admin
-* Other community or team contact
+# node index
+
+And open the browser on link:
+
+# localhost:8080/
