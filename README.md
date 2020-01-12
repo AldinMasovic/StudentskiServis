@@ -11,12 +11,12 @@ Open the folder Spirala4
 
 In terminal type:
 
-# npm install
+### npm install
 
 Then
 
-# node index
+### node index
 
 And open the browser on link:
 
-# localhost:8080/
+### localhost:8080/
